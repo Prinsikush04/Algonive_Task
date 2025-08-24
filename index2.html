@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚀 Task Manager</h1>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <form id="task-form">
+      <input type="text" id="title" placeholder="Task Title" required />
+      <textarea id="description" placeholder="Description"></textarea>
+      <input type="date" id="due-date" required />
+      <select id="priority">
+        <option value="Low">🟢 Low</option>
+        <option value="Medium">🟡 Medium</option>
+        <option value="High">🔴 High</option>
+      </select>
+      <button type="submit">➕ Add Task</button>
+    </form>
+
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+
+    <div class="filter">
+      <button onclick="filterTasks('all')">All</button>
+      <button onclick="filterTasks('complete')">Completed</button>
+      <button onclick="filterTasks('incomplete')">Incomplete</button>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
